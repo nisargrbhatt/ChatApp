@@ -1,0 +1,25 @@
+mat-card {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 10%;
+
+}
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.messageMessage {
+  color: black;
+}
+
+.main1 {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 10%;
+}

@@ -1,0 +1,80 @@
+<mat-card>
+  <div>
+    <div>
+      <h2>Chat Application</h2>
+      <hr />
+    </div>
+    <div>
+      <div>
+        <div>
+          <mat-form-field>
+            <mat-label>Username:</mat-label>
+            <input matInput type="text" [(ngModel)]="user" id="username" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div>
+        <label for="roomInput">Choose room: </label>
+        &nbsp;
+        <select
+          name="roomInput"
+          id="roomInput"
+          class="form-control"
+          [(ngModel)]="room"
+        >
+          <option value="Lobby">Lobby</option>
+          <option value="Hall">Hall</option>
+          <option value="Deluxe">Deluxe</option>
+        </select>
+      </div>
+      <div>
+        <div style="margin-top: 19px;" class="pull-right">
+          <button
+            mat-raised-button
+            color="accent"
+            type="button"
+            (click)="join()"
+          >
+            Join
+          </button>
+          &nbsp;
+          <button
+            mat-raised-button
+            color="warn"
+            type="button"
+            (click)="leave()"
+          >
+            Leave
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div style="height: 200px; padding: 15px;">
+        <div *ngFor="let item of messageArray">
+          <span
+            ><strong>{{ item.user }} : </strong> {{ item.message }}</span
+          >
+        </div>
+      </div>
+    </div>
+    <div>
+      <div>
+        <mat-form-field>
+          <input
+            matInput
+            type="text"
+            [(ngModel)]="messageText"
+            placeholder="Type a message"
+          />
+        </mat-form-field>
+      </div>
+      <div>
+        <button mat-raised-button color="primary" (click)="sendMessage()">
+          Send
+        </button>
+      </div>
+    </div>
+  </div>
+</mat-card>
